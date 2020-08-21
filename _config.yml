@@ -1,9 +1,9 @@
 # ----------- CONFIGURABLE START -----------
-title:            "LiberXue|FullStack|独立开发者|jekyll blog|GitHub blog"
-description:      "Full Stack独立开发者|欢迎来到 LiberXue「角落」侃侃理想、谈谈人生、敲敲代码。"
-url:              https://liberxue.github.io # 域名
-signoff:          "LiberXue" # Your name
-facebook_appid:   #liberxue
+title:            "恬静的小魔龙|Unity开发|技术博客"
+description:      "欢迎来到 itMonon恬静的小魔龙「技术博客」侃侃理想、谈谈人生、敲敲代码。"
+url:              https://764424567.github.io # 域名
+signoff:          "764424567" # Your name
+facebook_appid:   #764424567
 google_analytics: UA-101222464-1
 share:            true 
 # 分页
@@ -13,12 +13,6 @@ gems: [jekyll-paginate]
 links:
   - name:         首页
     url:          /
-    external:     false
-  - name:         书籍
-    url:          /book
-    external:     false
-  - name:         旅游
-    url:          /road
     external:     false
   - name:         归档
     url:          /archives
@@ -31,7 +25,7 @@ links:
     external:     false
 # ------------ CONFIGURABLE END ------------
 
-#permalink:        /:categories/:title.html
+#permalink:  /:categories/:title.html
 permalink: /:year/:month/:day/:title.html
 defaults:
   - values:
