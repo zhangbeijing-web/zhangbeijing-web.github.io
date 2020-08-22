@@ -14,14 +14,17 @@ links:
   - name:         首页
     url:          /
     external:     false
+  - name:         Unity3D日常开发
+    url:          /NavigationBar/u3daily
+    external:     false
   - name:         归档
-    url:          /archives
+    url:          /NavigationBar/archives
     external:     false
   - name:         标签
-    url:          /tags
+    url:          /NavigationBar/tags
     external:     false
   - name:         关于
-    url:          /about
+    url:          /NavigationBar/about
     external:     false
 # ------------ CONFIGURABLE END ------------
 

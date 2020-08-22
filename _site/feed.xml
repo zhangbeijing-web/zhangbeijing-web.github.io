@@ -1,18 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>恬静的小魔龙|Unity开发|jekyll blog|GitHub blog</title>
+    <title>恬静的小魔龙|Unity开发|技术博客</title>
     <description>欢迎来到 itMonon恬静的小魔龙「技术博客」侃侃理想、谈谈人生、敲敲代码。</description>
     <link>http://localhost:4000</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
-        <title>修改标题</title>
-        <category>修改标签</category>
-        <description>测试文章</description>
-        <pubDate>2018-07-30 18:06:42 </pubDate>
-        <link>http://localhost:4000/%E4%BF%AE%E6%94%B9%E6%A0%87%E7%AD%BE/001.html</link>
-        <guid isPermaLink="true">http://localhost:4000/%E4%BF%AE%E6%94%B9%E6%A0%87%E7%AD%BE/001.html</guid>
+        <title>【Unity3D开发小游戏】数字华容道</title>
+        <category>Unity3D</category>
+        <description>一、前言因为最强大脑让【数字华容道】这款老游戏又火了一把，那就让我们来看看这个游戏是怎么实现的吧，有什么样的算法呢。二、GitHubGitHub地址：https://github.com/764...</description>
+        <pubDate>2020-08-22 05:09:00 </pubDate>
+        <link>http://localhost:4000/2020/08/22/u3game_DigitalHuarongRoad.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/08/22/u3game_DigitalHuarongRoad.html</guid>
+      </item>
+    
+      <item>
+        <title>Unity3D中控制人物移动</title>
+        <category>Unity3D</category>
+        <description>  使用Input.GetAxis(“Horizontal”) 和 “Vertical”得到垂直和水平方向的值  使用CharacterController.SimpleMove(Vector3...</description>
+        <pubDate>2020-08-22 04:09:00 </pubDate>
+        <link>http://localhost:4000/2020/08/22/u3move.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/08/22/u3move.html</guid>
+      </item>
+    
+      <item>
+        <title>Unity3D鼠标经过物体时变颜色，离开时恢复</title>
+        <category>Unity3D</category>
+        <description>usingUnityEngine;usingSystem.Collections;publicclassMouseEvent_Color : MonoBehaviour {    //物体初始颜...</description>
+        <pubDate>2020-08-22 04:09:00 </pubDate>
+        <link>http://localhost:4000/2020/08/22/u3mouse.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/08/22/u3mouse.html</guid>
+      </item>
+    
+      <item>
+        <title>【Unity3D开发小游戏】纸箱战争</title>
+        <category>Unity3D</category>
+        <description>一、前言游戏玩法类似与战地系列的FPS对抗游戏，玩家可以利用在地图中的载具对目标点发起进攻，最后夺得目标争夺点取得游戏的胜利。完全原创肯定就不能使用网络上的美术资源和他人分享的代码亦或是插件，鉴...</description>
+        <pubDate>2020-08-22 04:09:00 </pubDate>
+        <link>http://localhost:4000/2020/08/22/u3game_CartonWar.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/08/22/u3game_CartonWar.html</guid>
       </item>
     
   </channel>
