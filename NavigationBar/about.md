@@ -22,8 +22,9 @@ redirect_from:
 
 原Github地址：
  
-LiberXue：<iframe src="http://ghbtns.com/github-btn.html?user=liberxue&repo=liberxue.github.io&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="95" height="20"></iframe>
+LiberXue：
+<iframe src="http://ghbtns.com/github-btn.html?user=liberxue&repo=liberxue.github.io&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="95" height="20"></iframe>
 
-本人Fork的地址：
+本人博客Github地址：
 [https://github.com/764424567/764424567.github.io](https://github.com/764424567/764424567.github.io)
 
