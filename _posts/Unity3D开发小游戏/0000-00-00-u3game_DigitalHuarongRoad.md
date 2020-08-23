@@ -1,6 +1,7 @@
 ---
 layout:   blog
 istop:	  true
+u3game:	  true
 category: Unity3D
 title:    【Unity3D开发小游戏】数字华容道
 date:     2020-08-21 21:09:00

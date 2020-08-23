@@ -14,17 +14,26 @@ links:
   - name:         首页
     url:          /
     external:     false
-  - name:         Unity3D日常开发
-    url:          /NavigationBar/u3daily
+  - name:         日常
+    url:          /pages/u3daily
+    external:     false
+  - name:         插件
+    url:          /pages/u3plugin
+    external:     false
+  - name:         游戏
+    url:          /pages/u3game
+    external:     false
+  - name:         演示
+    url:          /pages/u3demo
     external:     false
   - name:         归档
-    url:          /NavigationBar/archives
+    url:          /pages/archives
     external:     false
   - name:         标签
-    url:          /NavigationBar/tags
+    url:          /pages/tags
     external:     false
   - name:         关于
-    url:          /NavigationBar/about
+    url:          /pages/about
     external:     false
 # ------------ CONFIGURABLE END ------------
 

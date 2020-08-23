@@ -1,9 +1,14 @@
 ---
-layout: post
-category: Unity3D-Game
-title: 【Unity3D开发小游戏】《愤怒的小鸟》Unity开发教程
-tagline: by 恬静的小魔龙
-tag: Unity3D
+layout:   blog
+istop:	  true
+u3game:	  true
+category: Unity3D
+title:    【Unity3D开发小游戏】愤怒的小鸟
+date:     2020-08-21 21:09:00
+background-image: https://imgconvert.csdnimg.cn/aHR0cHM6Ly9ub29idHV0cy5jb20vY29udGVudC91bml0eS8yZC1hbmdyeS1iaXJkcy1nYW1lL3VuaXR5X2FuZ3J5YmlyZHMuZ2lm
+tags:
+- Unity3D
+- Unity3D开发小游戏
 ---
 
 @[TOC](《愤怒的小鸟》开发教程)

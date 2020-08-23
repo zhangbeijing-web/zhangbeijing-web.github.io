@@ -7,39 +7,120 @@
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
-        <title>【Unity3D开发小游戏】数字华容道</title>
+        <title>【Unity3D开发小游戏】VVVVV游戏</title>
         <category>Unity3D</category>
-        <description>一、前言因为最强大脑让【数字华容道】这款老游戏又火了一把，那就让我们来看看这个游戏是怎么实现的吧，有什么样的算法呢。二、GitHubGitHub地址：https://github.com/764...</description>
+        <description>@[TOC]一、前言本教程将展示如何在特里·卡瓦纳赫的启发下，制作一款简单而令人上瘾的平台游戏-VVVVV游戏。这个游戏规则很简单，用户必须通过水平行走或倒转重力来控制一个小个子通过某种奇怪的迷...</description>
         <pubDate>2020-08-22 05:09:00 </pubDate>
-        <link>http://localhost:4000/2020/08/22/u3game_DigitalHuarongRoad.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/08/22/u3game_DigitalHuarongRoad.html</guid>
+        <link>http://localhost:4000/2020/08/22/u3game_V.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/08/22/u3game_V.html</guid>
       </item>
     
       <item>
-        <title>Unity3D中控制人物移动</title>
+        <title>【Unity3D开发小游戏】俄罗斯方块</title>
         <category>Unity3D</category>
-        <description>  使用Input.GetAxis(“Horizontal”) 和 “Vertical”得到垂直和水平方向的值  使用CharacterController.SimpleMove(Vector3...</description>
-        <pubDate>2020-08-22 04:09:00 </pubDate>
-        <link>http://localhost:4000/2020/08/22/u3move.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/08/22/u3move.html</guid>
+        <description>@[TOC]一、前言《俄罗斯方块》（Tetris， 俄文：Тетрис）是一款由俄罗斯人阿列克谢·帕基特诺夫于1984年6月发明的休闲游戏。该游戏曾经被多家公司代理过。经过多轮诉讼后，该游戏的代...</description>
+        <pubDate>2020-08-22 05:09:00 </pubDate>
+        <link>http://localhost:4000/2020/08/22/u3game_Tetris.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/08/22/u3game_Tetris.html</guid>
       </item>
     
       <item>
-        <title>Unity3D鼠标经过物体时变颜色，离开时恢复</title>
+        <title>【Unity3D开发小游戏】太空射击游戏</title>
         <category>Unity3D</category>
-        <description>usingUnityEngine;usingSystem.Collections;publicclassMouseEvent_Color : MonoBehaviour {    //物体初始颜...</description>
-        <pubDate>2020-08-22 04:09:00 </pubDate>
-        <link>http://localhost:4000/2020/08/22/u3mouse.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/08/22/u3mouse.html</guid>
+        <description>@TOC一、前言我们的太空射击游戏受到古老的街机游戏的启发我们将利用物理等各种不同的Unity特征(包括刚体和碰撞器)、动画(Mecanim)，脚本(C#)，预制体，阴影和 Sprite Edi...</description>
+        <pubDate>2020-08-22 05:09:00 </pubDate>
+        <link>http://localhost:4000/2020/08/22/u3game_SpaceFire.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/08/22/u3game_SpaceFire.html</guid>
       </item>
     
       <item>
-        <title>【Unity3D开发小游戏】纸箱战争</title>
+        <title>【Unity3D开发小游戏】贪吃蛇</title>
         <category>Unity3D</category>
-        <description>一、前言游戏玩法类似与战地系列的FPS对抗游戏，玩家可以利用在地图中的载具对目标点发起进攻，最后夺得目标争夺点取得游戏的胜利。完全原创肯定就不能使用网络上的美术资源和他人分享的代码亦或是插件，鉴...</description>
-        <pubDate>2020-08-22 04:09:00 </pubDate>
-        <link>http://localhost:4000/2020/08/22/u3game_CartonWar.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/08/22/u3game_CartonWar.html</guid>
+        <description>@[TOC]一、前言贪吃蛇游戏是一款经典的益智游戏，有PC和手机等多平台版本。既简单又耐玩。该游戏通过控制蛇头方向吃蛋，从而使得蛇变得越来越长。那么如何用unity做一个贪吃蛇游戏呢，就跟随作者...</description>
+        <pubDate>2020-08-22 05:09:00 </pubDate>
+        <link>http://localhost:4000/2020/08/22/u3game_Snake.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/08/22/u3game_Snake.html</guid>
+      </item>
+    
+      <item>
+        <title>【Unity3D开发小游戏】植物大战僵尸</title>
+        <category>Unity3D</category>
+        <description>@[TOC]一、前言今天我们要用Unity3D做一个植物大战僵尸的仿制版本。为了保持简单，我们将忽略所有花哨的东西，如菜单，多层关卡或过场动画，并专注于在后院与僵尸作战。效果图：二、源码UI资源...</description>
+        <pubDate>2020-08-22 05:09:00 </pubDate>
+        <link>http://localhost:4000/2020/08/22/u3game_PvZ.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/08/22/u3game_PvZ.html</guid>
+      </item>
+    
+      <item>
+        <title>【Unity3D开发小游戏】2D乒乓球游戏</title>
+        <category>Unity3D</category>
+        <description>一、前言本篇文章教大家如何用unity制作一个2D游戏，乒乓球游戏，主要用到的Unity知识包括碰撞，Transfrom等知识，希望大家可以在这个小教程中学习到东西二、效果图：三、正文本教程将展...</description>
+        <pubDate>2020-08-22 05:09:00 </pubDate>
+        <link>http://localhost:4000/2020/08/22/u3game_Pong.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/08/22/u3game_Pong.html</guid>
+      </item>
+    
+      <item>
+        <title>【Unity3D开发小游戏】吃豆人</title>
+        <category>Unity3D</category>
+        <description>@[TOC]一、前言让我们在Unity里面制作一款吃豆人游戏，最初的吃豆人游戏于1980年10月发布，并很快成为有史以来最著名的街机游戏。这款游戏非常受欢迎，甚至连Unity公司也在他们的游戏引...</description>
+        <pubDate>2020-08-22 05:09:00 </pubDate>
+        <link>http://localhost:4000/2020/08/22/u3game_PacMan.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/08/22/u3game_PacMan.html</guid>
+      </item>
+    
+      <item>
+        <title>【Unity3D开发小游戏】扫雷</title>
+        <category>Unity3D</category>
+        <description>@[TOC]一、前言这是一款经典的小游戏，是Win系统自带的小游戏，是一款大众类的益智小游戏，于1992年发行。游戏目标是在最短的时间内根据点击格子出现的数字找出所有非雷格子，同时避免踩雷，踩到...</description>
+        <pubDate>2020-08-22 05:09:00 </pubDate>
+        <link>http://localhost:4000/2020/08/22/u3game_Mine.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/08/22/u3game_Mine.html</guid>
+      </item>
+    
+      <item>
+        <title>【Unity3D开发小游戏】超级马里奥</title>
+        <category>Unity3D</category>
+        <description>@[TOC]一、前言超级马里奥游戏于1985年为任天堂娱乐系统发布，成为有史以来最受欢迎的电子游戏之一。当涉及到好的游戏设计时，这个游戏是一个很好的例子。在本教程中，我们将创建游戏的一个小Dem...</description>
+        <pubDate>2020-08-22 05:09:00 </pubDate>
+        <link>http://localhost:4000/2020/08/22/u3game_Mario.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/08/22/u3game_Mario.html</guid>
+      </item>
+    
+      <item>
+        <title>【Unity3D开发小游戏】2D光圈游戏</title>
+        <category>Unity3D</category>
+        <description>一、前言让我们在团结中制作一个电子风格的2D游戏。两名球员将能够相互竞争。目标是移动你的光线以一种诱捕另一个玩家的方式，有点像一个多人贪吃蛇游戏。我们的游戏将非常简单，只有不到60行代码和只有三...</description>
+        <pubDate>2020-08-22 05:09:00 </pubDate>
+        <link>http://localhost:4000/2020/08/22/u3game_Halo.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/08/22/u3game_Halo.html</guid>
+      </item>
+    
+      <item>
+        <title>【Unity3D开发小游戏】宝石迷阵</title>
+        <category>Unity3D</category>
+        <description>@[TOC]一、前言让我们在Unity做一个宝石风格的游戏。对于那些从未听说过的人来说，宝石迷阵是一个三回合制的游戏，在2001年发布，后来复制为流行的糖果粉碎游戏。(这也使得这是一个Unity...</description>
+        <pubDate>2020-08-22 05:09:00 </pubDate>
+        <link>http://localhost:4000/2020/08/22/u3game_Gem.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/08/22/u3game_Gem.html</guid>
+      </item>
+    
+      <item>
+        <title>【Unity3D开发小游戏】青蛙游戏</title>
+        <category>Unity3D</category>
+        <description>@[TOC]一、前言我们的教程将解释如何在Unity中制作2D青蛙过河游戏。弗罗格早在1981年就发行了，但由于它的街机性质，它在今天仍然很有趣，并且很容易在Unity中开发。这将是如此容易，我...</description>
+        <pubDate>2020-08-22 05:09:00 </pubDate>
+        <link>http://localhost:4000/2020/08/22/u3game_Frog.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/08/22/u3game_Frog.html</guid>
+      </item>
+    
+      <item>
+        <title>【Unity3D开发小游戏】Flappy Bird</title>
+        <category>Unity3D</category>
+        <description>一、前言在本教程，我们将带领大家开发一个Flappy Bird的游戏。Flappy Bird Game于2013年发布，并于2014年1月成为当月下载最多的IOS应用程序。游戏设计非常简单：一只...</description>
+        <pubDate>2020-08-22 05:09:00 </pubDate>
+        <link>http://localhost:4000/2020/08/22/u3game_FlappyBrids.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/08/22/u3game_FlappyBrids.html</guid>
       </item>
     
   </channel>

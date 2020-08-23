@@ -1,49 +1,60 @@
 ---
-layout: post
-category: Unity3D-Game
-title: 【Unity3D开发小游戏】《吃豆人》Unity开发教程
-tagline: by 恬静的小魔龙
-tag: Unity3D
+layout:   blog
+istop:	  true
+u3game:	  true
+category: Unity3D
+title:    【Unity3D开发小游戏】吃豆人
+date:     2020-08-21 21:09:00
+background-image: https://img-blog.csdnimg.cn/20190823151616643.png
+tags:
+- Unity3D
+- Unity3D开发小游戏
 ---
 
+@[TOC]
 ## 一、前言
 让我们在Unity里面制作一款吃豆人游戏，最初的吃豆人游戏于1980年10月发布，并很快成为有史以来最著名的街机游戏。这款游戏非常受欢迎，甚至连Unity公司也在他们的游戏引擎中加入了其中的一小部分：
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/2019082315143920.png)
 在本教程中，我们将使用Unity强大的2D功能，制作一个吃豆人游戏，我们会尽量让代码简单，像往常一样，尽可能的简单地解释，这样每个人都能理解它。
 
 
-## 二、效果图
+**效果图**
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20190823151616643.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3E3NjQ0MjQ1Njc=,size_16,color_FFFFFF,t_70)
+## 二、源码
+UI资源和源代码请搜索QQ群：1040082875下载
 
 ## 三、教程
-**注意：版本号，Unity5.0.0f4** 
+### 版本
+版本：Unity5.0.0f4
 
-**1.摄像机设置**
+### 1.摄像机设置
 
 我们将选择主照相机在层次性然后将背景颜色设置为黑色。我们还将调整大小而位置如下图所示：
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20190823151717524.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3E3NjQ0MjQ1Njc=,size_16,color_FFFFFF,t_70)
 
-**2.背景设置**
+### 2.背景设置
 ![在这里插入图片描述](https://imgconvert.csdnimg.cn/aHR0cHM6Ly9ub29idHV0cy5jb20vY29udGVudC91bml0eS8yZC1wYWNtYW4tZ2FtZS9tYXplLnBuZw?x-oss-process=image/format,png)
 保存下来，放到我们项目中Sprites文件夹中
 ![在这里插入图片描述](https://imgconvert.csdnimg.cn/aHR0cHM6Ly9ub29idHV0cy5jb20vY29udGVudC91bml0eS8yZC1wYWNtYW4tZ2FtZS9tYXplX3Byb2plY3RhcmVhLnBuZw?x-oss-process=image/format,png)
 然后修改它的属性。点击图片->Inspector面板
 ![在这里插入图片描述](https://imgconvert.csdnimg.cn/aHR0cHM6Ly9ub29idHV0cy5jb20vY29udGVudC91bml0eS8yZC1wYWNtYW4tZ2FtZS9tYXplX2ltcG9ydHNldHRpbmdzLnBuZw?x-oss-process=image/format,png)
-注：Pixels Per Unit单位像素值设置成8，这意味着8x8像素将适合在游戏世界的一个单位。我们将使用这个值作为我们所有的纹理。我们选择了8因为两个点之间的距离总是8。我们选择左下角为枢轴因为这样以后对齐就更容易了。
+*注：Pixels Per Unit单位像素值设置成8，这意味着8x8像素将适合在游戏世界的一个单位。我们将使用这个值作为我们所有的纹理。我们选择了8因为两个点之间的距离总是8。我们选择左下角为枢轴因为这样以后对齐就更容易了。*
 
 然后我们将图片拖到到场景中，并且归零：
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20190823153804169.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3E3NjQ0MjQ1Njc=,size_16,color_FFFFFF,t_70)
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20190823153809797.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3E3NjQ0MjQ1Njc=,size_16,color_FFFFFF,t_70)
-添加物理效果：
+**添加物理效果**
+
 将每一面墙都添加上BoxCollider，需要注意的是每一道墙的BoxCollider应该都是非常精确的，不然可能游戏开始的时候你可能会困到迷宫里面了。
 
 
-**3.吃豆人设置**
+### 3.吃豆人设置
 吃豆人的运动方向不同，状态也不同，让我们在一个图像中绘制所有动画，其中每行有一个动画：
 ![在这里插入图片描述](https://imgconvert.csdnimg.cn/aHR0cHM6Ly9ub29idHV0cy5jb20vY29udGVudC91bml0eS8yZC1wYWNtYW4tZ2FtZS9wYWNtYW4ucG5n?x-oss-process=image/format,png)
 将图片保存到Sprite文件夹中。
 
 我们需要将图片处理一下，将这样图片做一下切片：
+
 点击图片
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20190823154458493.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3E3NjQ0MjQ1Njc=,size_16,color_FFFFFF,t_70)
 Texture Type设置成Sprite
@@ -54,7 +65,7 @@ Sprite Mode设置成Multiple
 把它切成16X16的网格，点击Apply
 ![在这里插入图片描述](https://imgconvert.csdnimg.cn/aHR0cHM6Ly9ub29idHV0cy5jb20vY29udGVudC91bml0eS8yZC1wYWNtYW4tZ2FtZS9wYWNtYW5fc3ByaXRlZWRpdG9yX3NldHRpbmdzLnBuZw?x-oss-process=image/format,png)
 
-制作动画
+**制作动画**
 
 现在我们有了动画切片，就可以用它创建4个动画，分别是：
 - 右（边），正确的(切片0、1和2)
@@ -226,9 +237,10 @@ public class PacmanMove : MonoBehaviour {
     }
 }
 ```
-注：我们使用GetComponent来访问Pac-Man的刚体组件。然后，我们使用它来进行移动(我们不应该使用Transform.Place来移动具有刚体的GameObjects)。
-当我们不移动时，我们也要注意箭头键的按压。
-注意：如果当前位置等于目的地，我们就不会移动。
+*注意：我们使用GetComponent来访问Pac-Man的刚体组件。然后，我们使用它来进行移动(我们不应该使用Transform.Place来移动具有刚体的GameObjects)。
+当我们不移动时，我们也要注意箭头键的按压。*
+
+*注意：如果当前位置等于目的地，我们就不会移动。*
 
 下面是具有输入检查的FixedUpdate函数：
 
@@ -251,11 +263,11 @@ void FixedUpdate() {
     }
 }
 ```
-注：变换位置铸成矢量2因为这是比较或添加另一个Vector 2的唯一方法。也-向量2.右手段左边和-向量2.向上手段降下来.
+*注：变换位置铸成矢量2因为这是比较或添加另一个Vector 2的唯一方法。也-向量2.右手段左边和-向量2.向上手段降下来.*
 
 
 
-设置动画参数
+**设置动画参数**
 现在，我们可以很好地将Pac-Man移动到迷宫中，但是动画师还没有播放所有的动画。没问题，让我们修改代码来计算当前的移动方向，然后设置动画参数：
 
 ```csharp
@@ -289,11 +301,11 @@ void FixedUpdate() {
 
 在我们开始研究Pac-Dot之前，我们应该确保Pac-Man总是被吸引到他们的前面。我们正在做一个2D游戏，所以没有真正的Z就像3D游戏一样。这意味着，统一只会随意绘制对象。让我们确保团结总是在其他一切面前吸引帕克曼。
 
-有两种方法可以做到这一点。我们可以要么更改雪碧渲染器氏分选层属性，或者我们可以更改层序财产。这个分选层对于拥有更多物品的大型游戏来说是很重要的。对我们来说，只要简单地更改层序到1:
-Pac-Man SpriteRenderer Order in Layer
-注意：统一绘制对象按其顺序排序。它以最低的顺序开始，以更高的顺序继续。所以，如果帕克-曼有第一项命令，那么他总是在迷宫、食物和其他任何有0顺序的东西之后抽签。因为他喜欢其他的东西，所以他会自动地排在其他的前面
+有两种方法可以做到这一点。我们可以要么更改雪碧渲染器氏分选层属性，或者我们可以更改层序财产。这个分选层对于拥有更多物品的大型游戏来说是很重要的。对我们来说，只要简单地更改层序到1: Order in Layer
 
-**4.小圆点设置**
+*注意：统一绘制对象按其顺序排序。它以最低的顺序开始，以更高的顺序继续。所以，如果帕克-曼有第一项命令，那么他总是在迷宫、食物和其他任何有0顺序的东西之后抽签。因为他喜欢其他的东西，所以他会自动地排在其他的前面*
+
+### 4.小圆点设置
 可以吃的小圆点叫做“点”(pac-dots)。有些人现在可能是“水果”或者只是“食物”。我们先画一张小画2x2PX图像的Pac-点：
 ![在这里插入图片描述](https://imgconvert.csdnimg.cn/aHR0cHM6Ly9ub29idHV0cy5jb20vY29udGVudC91bml0eS8yZC1wYWNtYW4tZ2FtZS9wYWNkb3QucG5n?x-oss-process=image/format,png)
 将这个图片保存下来，拖到项目的Sprite文件夹中
@@ -301,6 +313,7 @@ Pac-Man SpriteRenderer Order in Layer
 然后拖到场景中，添加BoxCollider组件
 
 让我们为这个小圆点添加一个脚本：
+
 Pacdot.cs
 
 ```csharp
@@ -320,7 +333,7 @@ public class Pacdot : MonoBehaviour {
     }
 }
 ```
-我们不需要启动或者更新函数，所以让我们移除这两个函数。相反，我们将使用前面提到的OnTriggerEnter2D职能：
+我们不需要Start或者Update函数，所以让我们移除这两个函数。相反，我们将使用前面提到的OnTriggerEnter2D职能：
 
 ```csharp
 using UnityEngine;
@@ -350,7 +363,7 @@ public class Pacdot : MonoBehaviour {
 然后我们复制豆豆，将它像场景中摆放的一样，摆放一下：
 
 ![在这里插入图片描述](https://imgconvert.csdnimg.cn/aHR0cHM6Ly9ub29idHV0cy5jb20vY29udGVudC91bml0eS8yZC1wYWNtYW4tZ2FtZS9wYWNkb3RzX2FsbC5wbmc?x-oss-process=image/format,png)
-5.敌人设置
+### 5.敌人设置
 
 红鬼形象：
 和往常一样，我们将从画一个幽灵Sprite开始，里面有所有的动画。每一行将包含一个动画：
@@ -416,7 +429,8 @@ public class GhostMove : MonoBehaviour {
     }
 }
 ```
-注意：数组意味着它不仅仅是一个转换。
+*注意：数组意味着它不仅仅是一个转换。*
+
 我们还需要某种索引变量来跟踪敌人当前走向的路径点：
 
 ```csharp
@@ -433,7 +447,8 @@ public class GhostMove : MonoBehaviour {
 }
 ```
 
-注意：当前的路径点总是可以用路标[路].
+*注意：当前的路径点总是可以用路标[路].*
+
 当然还有一个运动速度变量：
 
 ```csharp
@@ -467,7 +482,8 @@ void FixedUpdate () {
 }
 ```
 
-注意：我们使用了矢量2.运动塔函数来计算一个点，该点离路径点有点近。之后我们把鬼魂的位置刚体2D.移动定位..如果到达路径点，则增加库尔一分为二。我们还想重新设置库尔到0如果它超过列表长度。我们可以用这样的方法如果(cur=waypoints.length)cur=0，但是使用模块(%)操作符使这个看起来更优雅一些。
+*注意：我们使用了矢量2.运动塔函数来计算一个点，该点离路径点有点近。之后我们把鬼魂的位置刚体2D.移动定位..如果到达路径点，则增加库尔一分为二。我们还想重新设置库尔到0如果它超过列表长度。我们可以用这样的方法如果(cur=waypoints.length)cur=0，但是使用模块(%)操作符使这个看起来更优雅一些。*
+
 我们也不要忘记设置动画参数：
 
 ```csharp
@@ -496,13 +512,13 @@ void OnTriggerEnter2D(Collider2D co) {
         Destroy(co.gameObject);
 }
 ```
-注意：请随意减少病人的生命或显示游戏结束屏幕就在这一点上。
+*注意：请随意减少病人的生命或显示游戏结束屏幕就在这一点上。*
 
 
-6.路径点设置
+### 6.路径点设置
 好的，让我们为敌人添加一些路径点。我们将从选择游戏对象->创建空从上面的菜单。我们会把它重命名为Blinky_Waypoint 0然后分配一个这样我们才能更容易地在现场看到：
 ![在这里插入图片描述](https://imgconvert.csdnimg.cn/aHR0cHM6Ly9ub29idHV0cy5jb20vY29udGVudC91bml0eS8yZC1wYWNtYW4tZ2FtZS9ibGlua3lfd2F5cG9pbnQwX2luc3BlY3Rvci5wbmc?x-oss-process=image/format,png)
-注意：Gizmo只是一个视觉助手，我们在玩游戏时看不到它。
+*注意：Gizmo只是一个视觉助手，我们在玩游戏时看不到它。*
 
 我们也把它放在(15, 20)..现在情况如下：![在这里插入图片描述](https://imgconvert.csdnimg.cn/aHR0cHM6Ly9ub29idHV0cy5jb20vY29udGVudC91bml0eS8yZC1wYWNtYW4tZ2FtZS9ibGlua3lfd2F5cG9pbnQwX3NjZW5lLnBuZw?x-oss-process=image/format,png)
 现在我们可以复制Waypoint，将其重命名为Blinky Waypoint 1把它放在(10, 20):![在这里插入图片描述](https://imgconvert.csdnimg.cn/aHR0cHM6Ly9ub29idHV0cy5jb20vY29udGVudC91bml0eS8yZC1wYWNtYW4tZ2FtZS9ibGlua3lfd2F5cG9pbnQxX3NjZW5lLnBuZw?x-oss-process=image/format,png)
@@ -511,11 +527,11 @@ void OnTriggerEnter2D(Collider2D co) {
 
 让我们选择敌人在层次性然后将一个又一个的路径点拖到路点我们的插槽GhostMove脚本中：
 
-**7.开始游戏**
+### 7.开始游戏
 
 我们点击Play，然后我们就可以开始游戏了
 
-**8.内容扩展**
+### 8.内容扩展
 
 现在该由读者来让游戏更有趣了。可以添加大量的功能：
 - 音乐

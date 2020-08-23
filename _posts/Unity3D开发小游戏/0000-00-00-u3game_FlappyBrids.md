@@ -1,9 +1,14 @@
 ---
-layout: post
-category: Unity3D-Game
-title: 【Unity3D开发小游戏】《Flappy Bird》Unity开发教程
-tagline: by 恬静的小魔龙
-tag: Unity3D
+layout:   blog
+istop:	  true
+u3game:	  true
+category: Unity3D
+title:    【Unity3D开发小游戏】Flappy Bird
+date:     2020-08-21 21:09:00
+background-image: https://imgconvert.csdnimg.cn/aHR0cHM6Ly9ub29idHV0cy5jb20vY29udGVudC91bml0eS8yZC1mbGFwcHktYmlyZC1nYW1lL29ic3RhY2xlX21vdmluZy5naWY
+tags:
+- Unity3D
+- Unity3D开发小游戏
 ---
 
 ## 一、前言

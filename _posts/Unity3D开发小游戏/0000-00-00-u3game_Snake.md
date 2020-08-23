@@ -1,58 +1,57 @@
 ---
-layout: post
-category: Unity3D-Game
-title: 【Unity3D开发小游戏】《贪吃蛇》Unity开发教程
-tagline: by 恬静的小魔龙
-tag: Unity3D
+layout:   blog
+istop:	  true
+u3game:	  true
+category: Unity3D
+title:    【Unity3D开发小游戏】贪吃蛇
+date:     2020-08-21 21:09:00
+background-image: https://imgconvert.csdnimg.cn/aHR0cDovL21tYml6LnFwaWMuY24vbW1iaXovTEoyRktPU2g0OEhRSzhaSVd2WmljVFhURWNtaFdoOVlhc0o1aktkMnFVMmljbEdKa1VtWmFCeVlkcUFwS0FJd1daV3pqTjYzU1pVdmVUQVZhbXcyMVFCQS8w?x-oss-process=image/format,png
+tags:
+- Unity3D
+- Unity3D开发小游戏
 ---
 
+@[TOC]
 ## 一、前言
 贪吃蛇游戏是一款经典的益智游戏，有PC和手机等多平台版本。既简单又耐玩。该游戏通过控制蛇头方向吃蛋，从而使得蛇变得越来越长。
 那么如何用unity做一个贪吃蛇游戏呢，就跟随作者一起实现以下吧。
 
-## 二、效果图
+**效果图**
 ![在这里插入图片描述](https://imgconvert.csdnimg.cn/aHR0cDovL21tYml6LnFwaWMuY24vbW1iaXovTEoyRktPU2g0OEhRSzhaSVd2WmljVFhURWNtaFdoOVlhc0o1aktkMnFVMmljbEdKa1VtWmFCeVlkcUFwS0FJd1daV3pqTjYzU1pVdmVUQVZhbXcyMVFCQS8w?x-oss-process=image/format,png)
 
-GitHub地址：https://github.com/764424567/Game_Snake
-**注意：可以直接在GitHub仓库克隆或者下载源代码*
+## 二、资源下载
+UI资源和源代码请搜索QQ群：1040082875下载
 
 ## 三、正文
-**3.1 介绍**
+### 游戏介绍
 
 这篇文章将讲解怎么使用Unity制作简单的贪吃蛇游戏。贪吃蛇是一种街机游戏，最早的原型诞生于1976年。正如大多数街机游戏一样，它开发简单，且娱乐性强（至少克森的童年时玩它玩过来的）。
 
-**3.2 知识**
-
-我们的文章不需要什么特别的技巧，只需知道Unity的基本操作，例如：GameObject和Transform的概念等等。即使你不了解也没关系，只要你跟着我的思路来即可。
-
-**3.3 Unity版本**
+### Unity版本
 
 在本章教程中，我们将使用Unity5.0.04版本来制作。对于旧的版本也可以正常运行，不过建议大家还是使用Unity5.0以上的版本。
 
-项目设置
+### 项目设置
 让我们开始吧。首先先创建一个项目：
 ![在这里插入图片描述](https://imgconvert.csdnimg.cn/aHR0cDovL21tYml6LnFwaWMuY24vbW1iaXovTEoyRktPU2g0OEVHeTZMQTJsT2VuTHpBd0t2WEhLRnVwMWlhV1B6UEs3TE1rUVNGaWNtWFFzOUY4bGlhd3ptUFhhTDI1eDZ4Sm4ycmNvQUE0ODBWaWN3NXNRLzA?x-oss-process=image/format,png)
 将该工程命名为“snake”，路径由你们来设置，这里我设置的是C盘根目录下，选择2D开发，然后点击创建项目按钮：
 ![在这里插入图片描述](https://imgconvert.csdnimg.cn/aHR0cDovL21tYml6LnFwaWMuY24vbW1iaXovTEoyRktPU2g0OEVHeTZMQTJsT2VuTHpBd0t2WEhLRnUyeUZKY2thTUFtelFLYjNFRXZ3amJ0N1JZWGhOZFBzMnpZUTdSQzRTNm1TNXVtT3BIUkdXUFEvMA?x-oss-process=image/format,png)
 我选择场景中的Main Camera（主相机），然后再Inspector面板中修改相机的Background为黑色背景，最后调整Size和Position，如下图所示（注意参数要一样，方便后续跟进）：
 
-
 ![在这里插入图片描述](https://imgconvert.csdnimg.cn/aHR0cDovL21tYml6LnFwaWMuY24vbW1iaXovTEoyRktPU2g0OEVHeTZMQTJsT2VuTHpBd0t2WEhLRnUxNHh3enZnWDFYanJpY2M1bkdHQTFjd2FQSXZSRjJiUDNLUjRFQXhiNENhanZIYUdsVjVIQnZnLzA?x-oss-process=image/format,png)
 
-提示：Size是相机缩放调节的参数
+*提示：Size是相机缩放调节的参数*
 
-
-
-**3.4 添加边界**
+### 添加边界
 
 我们将使用下面两张图片来制作我们的边框：
-- [border_horizontal.png](https://noobtuts.com/content/unity/2d-snake-game/border_horizontal.png)
 
-- [border_vertical.png](https://noobtuts.com/content/unity/2d-snake-game/border_vertical.png)
+- border_horizontal.png
 
+- border_vertical.png
 
+*提示：图片资源可以搜索QQ群：1040082875下载*
 
-提示：你可以右击将图片保存到你项目的Assets文件夹下。
 
 我们再一次在Assets下选择这两张图片，如下所示：
 ![在这里插入图片描述](https://imgconvert.csdnimg.cn/aHR0cDovL21tYml6LnFwaWMuY24vbW1iaXovTEoyRktPU2g0OEVHeTZMQTJsT2VuTHpBd0t2WEhLRnVpYlFuQURRbjU2S1k1aWJERVhSVXgzTEg2QVRNVWlhZkZGZWQzUk5nczM4SWliUlpYaWFTRWFTQzF5US8w?x-oss-process=image/format,png)
@@ -62,7 +61,7 @@ GitHub地址：https://github.com/764424567/Game_Snake
 
 现在，我们可以制作我们的边框了。首先把Assets下的两张图片拖拽到Hierarchy面板下，拖拽两次（你也可以通过复制的方式实现），如下图所示：
 ![在这里插入图片描述](https://imgconvert.csdnimg.cn/aHR0cDovL21tYml6LnFwaWMuY24vbW1iaXovTEoyRktPU2g0OEVHeTZMQTJsT2VuTHpBd0t2WEhLRnVLdEVsWk5IT0trMWcwUHpySDUzM0J1cU9JVVVTRjJLczRmQjFaVDdGOTRLS2FqWXZ6a0Jua3cvMA?x-oss-process=image/format,png)
-提示：使用border_horizontal来制作顶部和底部的边框，使用border_vertical来制作左边和右边的边框。
+*提示：使用border_horizontal来制作顶部和底部的边框，使用border_vertical来制作左边和右边的边框。*
 
 让我们为它们重命名一下，方便查找。如下图所示（Top是顶部，Bottom是底部，Left是左边，right是右边）：
 ![在这里插入图片描述](https://imgconvert.csdnimg.cn/aHR0cDovL21tYml6LnFwaWMuY24vbW1iaXovTEoyRktPU2g0OEVHeTZMQTJsT2VuTHpBd0t2WEhLRnU1WjdndXlMVUZQSEJvMHA2aG5tZUgxQnNvMjFTbjFtRE5lMnNjOXF3emliaGliR09QS1NSd01VQS8w?x-oss-process=image/format,png)
@@ -74,12 +73,12 @@ GitHub地址：https://github.com/764424567/Game_Snake
 ![在这里插入图片描述](https://imgconvert.csdnimg.cn/aHR0cDovL21tYml6LnFwaWMuY24vbW1iaXovTEoyRktPU2g0OEVHeTZMQTJsT2VuTHpBd0t2WEhLRnVqbmhDTWpmRTVncEhvYUk2clhjUE9wS0dsWHFpY2tBMmQ4NUkycHJqaWFpY3lhZlJ0bWZUekIxUUEvMA?x-oss-process=image/format,png)
 刚刚我们所做的操作，不用写任何一行代码，便能让一张毫无卵用的图片编程了一堵墙，太感谢Unity这个强大的游戏引擎了。
 
-**3.5 创建食物预制体**
+### 创建食物预制体
 我们不想让我们的贪吃蛇饿死，因此，让我们在游戏中随机生成一些食物，提供给蛇食用吧。和上面的操作一样，我们将使用一张图片来制作食品。在我们的教程中，他只是一个像素的色块：
-[food.png](https://noobtuts.com/content/unity/2d-snake-game/food.png)
 
-提示：还是老样子，右击该图片，将它保存到你项目的Assets文件夹下。
+- food.png
 
+*提示：图片资源可以搜索QQ群：1040082875下载*
 
 还是老样子，将它的导入设置修改一下，如下图所示：
 ![在这里插入图片描述](https://imgconvert.csdnimg.cn/aHR0cDovL21tYml6LnFwaWMuY24vbW1iaXovTEoyRktPU2g0OEVHeTZMQTJsT2VuTHpBd0t2WEhLRnVwMWpnS1BNTXFpY2MyNUFyQ0RyVzdFZHNpYVY3Y2Jlb0FxS3h6Y3M3QVB3R1JOM24zMzZiWVRpYXcvMA?x-oss-process=image/format,png)
@@ -91,13 +90,14 @@ food（食物）添加Collider（碰撞器）组件。
 
 一个游戏物体没有Collider（碰撞器）组件，那么它只是一个可视化物体（就是没有交互功能的物体），它不是物理世界的一部分。一旦我们为游戏物体添加了Collider（碰撞器）组件，它如一堵墙，任何物体都不能穿透它，且能通过碰撞检测事件来进行交互，如：OnCollisionEnter2D、OnCollisionStay2D等等。假如我们勾选了Is Trigger，它便如水一般，可以穿透它，且能通过触发检测事件来进行交互，如：OnTriggerEnter2D、OnTriggerStay等等。
 
-当贪吃蛇穿过food（食物）时，贪吃蛇应该得到一些通知（就是所谓的响应事件）。然而食物不能像墙一样不能穿过它，因此我们现在要做的就是为food（食物）添加Collider（碰撞器），并且勾上Is Trigger：
+当贪吃蛇穿过food（食物）时，贪吃蛇应该得到一些通知（就是所谓的响应事件）。然而食物不能像墙一样不能穿过它，因此我们现在要做的就是为food（食物）添加Collider（碰撞器），并且勾上
+Is Trigger：
 ![在这里插入图片描述](https://imgconvert.csdnimg.cn/aHR0cDovL21tYml6LnFwaWMuY24vbW1iaXovTEoyRktPU2g0OEVHeTZMQTJsT2VuTHpBd0t2WEhLRnV4bWNPeWliNGliMEtBS0tnN2ljNkZ1Tm5pY3JwdFhvSjVsQXFsMnJrVkdybEpuNWZNUHc4MlFURWNnLzA?x-oss-process=image/format,png)
 好了，现在我们不想让food（食物）在游戏一开始就出现。因此我们把它做成一个预制体，以便我们使用Instantiate函数来生成它，每当我们需要它的时候。现在，让我们把food（食物）重命名为“FoodPrefab”，然后把它拖到Assets文件夹下：
 ![在这里插入图片描述](https://imgconvert.csdnimg.cn/aHR0cDovL21tYml6LnFwaWMuY24vbW1iaXovTEoyRktPU2g0OEVHeTZMQTJsT2VuTHpBd0t2WEhLRnV1bEh1U1NkZkVFZkNCeWRJaWNNaWFGNU5vQjdRN2tCTDAxcVRxQjFhNkNQSWlja1lZckRpYmJwQlZRLzA?x-oss-process=image/format,png)
 现在我们可以删除Hierarchy面板中的FoodPrefad了，因为我们暂时不需要它了。
 
-**3.6 生成食物**
+### 生成食物
 让我们在游戏开始之后，间隔几秒就在随机的地方生成一个food（食物）。那么，就让我们创建一个脚本来控制食物的生成吧。我们将把脚本放置在Main Camera下（因为Main Camera始终在游戏场景中）。首先，在Hierarchy中选择Main Camera，然后再Inspector面板中招到Add Component按钮，点击New Script，在Name的输入框中输入SpawnFood，脚本类型选择C Sharp，如下所示：
 
 ![在这里插入图片描述](https://imgconvert.csdnimg.cn/aHR0cDovL21tYml6LnFwaWMuY24vbW1iaXovTEoyRktPU2g0OEVHeTZMQTJsT2VuTHpBd0t2WEhLRnVPb1ZYQk5ncFdDSXBaQnVpYm5vdXY3akVBTTFmY1NtMmN4WmNSV1FWMFByaWFmUG1zZUE1ZWlhcEEvMA?x-oss-process=image/format,png)
@@ -205,7 +205,7 @@ void Start () {
     InvokeRepeating("Spawn", 3, 4);
 }
 ```
-**3.6 编辑器**
+### 生成食物
 
 InvokeRepeating()函数用于在每几秒内重复调用某个函数。第一个参数是函数的名字，第二个参数是第一次调用的时间，第三个参数是间隔调用的时间。在上面的代码中，在游戏开始后3秒调用Spawn函数，然后每4秒再重复调用Spawn函数。
 
@@ -252,10 +252,12 @@ public class SpawnFood : MonoBehaviour {
 ![在这里插入图片描述](https://imgconvert.csdnimg.cn/aHR0cDovL21tYml6LnFwaWMuY24vbW1iaXovTEoyRktPU2g0OEVHeTZMQTJsT2VuTHpBd0t2WEhLRnUzeXkxUEFFMkxscUt0bHVLVGoxdGIwVlRaTFNNRFd4T0lYUERYWktxNnh2TTl3TTV5d0dQRXcvMA?x-oss-process=image/format,png)
 好吧，现在让我们点击Play按钮，然后等待几秒钟，我们将能看到游戏场景中有了一些小点点（食物）：
 ![在这里插入图片描述](https://imgconvert.csdnimg.cn/aHR0cDovL21tYml6LnFwaWMuY24vbW1iaXovTEoyRktPU2g0OEVHeTZMQTJsT2VuTHpBd0t2WEhLRnVvRVp1cm5UWDVqdmozQWljQUxwRnlpY1VLUzVrdzFoNUNScjBtTXgzMlI0Ujg5Q29XRkV5cWlhUncvMA?x-oss-process=image/format,png)
-**3.7 创建贪吃蛇**
+### 创建贪吃蛇
 接下来让我们来完成游戏中最重要的部分：贪吃蛇。和上面一样，将图片保存到Assets文件夹下，然后修改导入设置：
-[snake.png](https://noobtuts.com/content/unity/2d-snake-game/snake.png)
-（由于图片太小，我直接放到文件夹中提供大伙们下载）
+
+- snake.png
+
+*提示：图片资源可以搜索QQ群：1040082875下载*
 
 snake的导入设置如下（参数要一致）：
 ![在这里插入图片描述](https://imgconvert.csdnimg.cn/aHR0cDovL21tYml6LnFwaWMuY24vbW1iaXovTEoyRktPU2g0OEVHeTZMQTJsT2VuTHpBd0t2WEhLRnVNaWFTbXdCcHlGamxISmpKMGFUR3MzM0JEbHhmZWgyckRuN25xMUlvQTFtOVhpYVZzaWNua2ZnaWJnLzA?x-oss-process=image/format,png)
@@ -277,7 +279,7 @@ snake的导入设置如下（参数要一致）：
 
 最终蛇将会包括很多个小元素，总会有一个头，和几个小元素组成的尾部，如下所示：
 
-**3.8 组成蛇身**
+### 组成蛇身
 
 在尾部元素和头部之间，唯一不同的是，稍后我们将添加一个脚本。
 
@@ -407,7 +409,7 @@ void Update() {
 ```
 现在点击Play按钮进行测试（记得按下方向键蛤）：
 ![在这里插入图片描述](https://imgconvert.csdnimg.cn/aHR0cDovL21tYml6LnFwaWMuY24vbW1iaXovTEoyRktPU2g0OEVHeTZMQTJsT2VuTHpBd0t2WEhLRnVtcGZKV2M2MUw4V05OTnk4STl1cm0ybzJYVkk0aHVyeGJmcmZrZzRiU3BubnFkOWRoaWFORmljUS8w?x-oss-process=image/format,png)
-**3.9 蛇的尾部**
+###  蛇的尾部
 现在让我们思考一下蛇的尾部该如何操作。首先，让我们假设我们有一个蛇，它有由一个Head（头）和3个尾部组成：
 
 ooox
@@ -427,9 +429,10 @@ step 3:  ooox  // last tail element moved into the gap
 
 首先，我们将需要一些数据结构，用于追踪（存放）所有尾部元素，如下所示：
 
+```csharp
 // Keep Track of Tail
 List<Transform> tail = new List<Transform>();
-
+```
 
 注意：List泛型类位于System.Collections.Generic命名空间中，因此之前我们使用using System.Collections.Generic是非常重要的。
 
@@ -456,7 +459,7 @@ void Move() {
 ```
 这是我们贪吃蛇教程中最复杂的部分，不过我们差不多完成了。
 
-**3.10 喂蛇**
+### 喂蛇
 我们将使用O你TriggerEnter2D()函数来接收碰撞信息（它将用于当蛇撞到墙和穿过食物的时候调用）。
 
 每当蛇触碰到食物的时候，我们将使用相同的操作（上面的思路），在间隙的地方实例化一个新的尾部元素，思路如下图所示：
@@ -465,20 +468,26 @@ ooo x  // gap
 oooox  // gap filled with new element
 去理解它是非常重要的，我们不让蛇在吃到食物后立马再吃到食物，就像我们的方向键检测按下一样，我们将等待它把当前动作完成之后。因此，我们需要一个新的变量，当蛇吃到食物后让它变为true：
 
+```csharp
 // Did the snake eat something?
 bool ate = false;
+```
+
 我们也需要一个公用的变量去存放尾部元素物体，用于当蛇碰到食物时再尾部生成该物体：
 
+
+```csharp
 // Did the snake eat something?
 bool ate = false;
 
 // Tail Prefab
 public GameObject tailPrefab;
 
+```
 
 
 
-注意：这两个变量是在我们的Snake脚本中定义的。
+*注意：这两个变量是在我们的Snake脚本中定义的。*
 
 现在，让我们编写O你TriggerEnter2D()函数的代码。具体用于当蛇碰到食物的时候，让ate变量的值变为true，然后删除触碰到的food物体。如果碰到的物体时边界的话，我们也让它做一些事情（当然目前还没有让它做什么事情）：
 
@@ -498,7 +507,7 @@ void OnTriggerEnter2D(Collider2D coll) {
     }
 }
 ```
-注意：我们使用coll.name.StartsWith()函数，因为我们要检测该物体是食物还是边界。当然，更好的方式是使用tag去判断，但是为了简单起见，我们就直接比较字符串即可。
+*注意：我们使用coll.name.StartsWith()函数，因为我们要检测该物体是食物还是边界。当然，更好的方式是使用tag去判断，但是为了简单起见，我们就直接比较字符串即可。*
 
 好了，让我们修改我们的Move()函数，判断蛇是否吃到了食物（也就是ate是否为true），然后在我们的尾部生成一个尾部元素，最后让ate变为原来的false值：
 
@@ -540,5 +549,7 @@ void Move() {
 ![在这里插入图片描述](https://imgconvert.csdnimg.cn/aHR0cDovL21tYml6LnFwaWMuY24vbW1iaXovTEoyRktPU2g0OEhRSzhaSVd2WmljVFhURWNtaFdoOVlhRFBwbnNLS1cwbXdLMlpqZFNFUktoRDAyQzRpYTRZRlg2ZktpYUxwSzdJWjVoZFhjYXhoeXRTR2cvMA?x-oss-process=image/format,png)
 现在点击Play按钮畅玩吧~！！
 ![在这里插入图片描述](https://imgconvert.csdnimg.cn/aHR0cDovL21tYml6LnFwaWMuY24vbW1iaXovTEoyRktPU2g0OEhRSzhaSVd2WmljVFhURWNtaFdoOVlhc0o1aktkMnFVMmljbEdKa1VtWmFCeVlkcUFwS0FJd1daV3pqTjYzU1pVdmVUQVZhbXcyMVFCQS8w?x-oss-process=image/format,png)
-总结
-贪吃蛇是一个神奇的游戏，通过该游戏的简单制作，我们学到了好多东西，比如InvokeRepeating()函数、OnTriggerEnter2D()函数的使用、碰撞器、简单的2D物理系统等等。
+### 总结
+贪吃蛇是一个神奇的游戏
+通过该游戏的简单制作，我们学到了好多东西
+比如InvokeRepeating()函数、OnTriggerEnter2D()函数的使用、碰撞器、简单的2D物理系统等等。

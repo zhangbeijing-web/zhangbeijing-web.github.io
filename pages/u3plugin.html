@@ -1,13 +1,13 @@
 ---
-title: 那些年走过的地方去过路过的美景
-description: "分享那些年走过的地方去过路过的美景"
+title: 插件
+description: Unity3D插件收集与介绍
 ---
 
 <div class="main-content index-page clearfix ">
 	<div class="post-lists">
 		<div class="post-lists-body">
 	  {% for posts in site.posts %}
-	  	   {% if posts.road%}
+	  	   {% if posts.u3plugin%}
 		<div class="post-list-item">
 				<div class="post-list-item-container">
 					 <div class="item-thumb  bg-{{posts.background }}" style="background-image:url('{{posts.background-image }}');"></div>
@@ -33,4 +33,3 @@ description: "分享那些年走过的地方去过路过的美景"
        {% endfor %}
 	</div>
 	</div>
-  {% include pagination.html %}
