@@ -7,6 +7,24 @@
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>【小游戏演示】俄罗斯方块</title>
+        <category>Unity3D-Demo</category>
+        <description>              Unity3D开发《俄罗斯方块》游戏演示                              			操作说明：箭头上下左右控制，一行填满就消除|使用说明：加载比...</description>
+        <pubDate>2020-08-24 06:10:00 </pubDate>
+        <link>http://localhost:4000/2020/08/24/u3demo_Tetris.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/08/24/u3demo_Tetris.html</guid>
+      </item>
+    
+      <item>
+        <title>【小游戏演示】愤怒的小鸟</title>
+        <category>Unity3D-Demo</category>
+        <description>              Unity3D 《愤怒的小鸟》游戏                              			操作说明：拉动小鸟弹弓，去射穿小猪吧|使用说明：加载比较慢，黑屏是...</description>
+        <pubDate>2020-08-24 06:09:00 </pubDate>
+        <link>http://localhost:4000/2020/08/24/u3demo_AngryBirds.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/08/24/u3demo_AngryBirds.html</guid>
+      </item>
+    
+      <item>
         <title>【Unity3D开发小游戏】跑酷小游戏</title>
         <category>Unity3D-Game</category>
         <description>一、前言最近跑酷游戏比较流行，开发教程也很多，但是大部分都是不太详细，这篇文章就带着大家一步一步开发出来一个跑酷类的游戏，教程比较基础，适合大部分Unity开发的初学者。还有就是，此专栏已经开通...</description>
@@ -103,24 +121,6 @@
         <pubDate>2020-08-22 05:09:00 </pubDate>
         <link>http://localhost:4000/2020/08/22/u3plugin_EasyTouch.html</link>
         <guid isPermaLink="true">http://localhost:4000/2020/08/22/u3plugin_EasyTouch.html</guid>
-      </item>
-    
-      <item>
-        <title>【Unity3D】EasyAR插件</title>
-        <category>Unity3D-Plugin</category>
-        <description>这篇文章介绍如何使用EasyAR.unitypackage配置EasyAR参考资料1、EasyAR 初学者入门指南http://forum.easyar.cn/portal.php?mod=vi...</description>
-        <pubDate>2020-08-22 05:09:00 </pubDate>
-        <link>http://localhost:4000/2020/08/22/u3plugin_EasyAR.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/08/22/u3plugin_EasyAR.html</guid>
-      </item>
-    
-      <item>
-        <title>【Unity3D】DoTweenPro插件</title>
-        <category>Unity3D-Plugin</category>
-        <description>Unity3d DoTweenPro研究本篇文章是记录在使用DoTweenPro插件中的一些心得体会：  DoTweenAnimation组件介绍  DoTweenAnimation组件属性详细...</description>
-        <pubDate>2020-08-22 05:09:00 </pubDate>
-        <link>http://localhost:4000/2020/08/22/u3plugin_DoTweenPro.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/08/22/u3plugin_DoTweenPro.html</guid>
       </item>
     
   </channel>
