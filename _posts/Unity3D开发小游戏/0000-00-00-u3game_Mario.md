@@ -1,8 +1,10 @@
 ---
 layout:   blog
-istop:	  true
+istop:	  false
+book:	  true
 u3game:	  true
-category: Unity3D
+category: Unity3D-Game
+ico:	  game
 title:    【Unity3D开发小游戏】超级马里奥
 date:     2020-08-21 21:09:00
 background-image: https://img-blog.csdnimg.cn/20200319163908281.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3E3NjQ0MjQ1Njc=,size_16,color_FFFFFF,t_70

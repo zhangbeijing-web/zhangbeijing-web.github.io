@@ -1,8 +1,10 @@
 ---
 layout:   blog
-istop:	  true
-u3game:	  true
-category: Unity3D
+istop:	  false
+book:	  false
+u3game:	  false
+category: Unity3D-Game
+ico:	  game
 title:    【Unity3D开发小游戏】贪吃蛇
 date:     2020-08-21 21:09:00
 background-image: https://imgconvert.csdnimg.cn/aHR0cDovL21tYml6LnFwaWMuY24vbW1iaXovTEoyRktPU2g0OEhRSzhaSVd2WmljVFhURWNtaFdoOVlhc0o1aktkMnFVMmljbEdKa1VtWmFCeVlkcUFwS0FJd1daV3pqTjYzU1pVdmVUQVZhbXcyMVFCQS8w?x-oss-process=image/format,png

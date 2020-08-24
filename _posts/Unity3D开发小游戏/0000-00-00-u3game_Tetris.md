@@ -1,14 +1,17 @@
 ---
 layout:   blog
-istop:	  true
+istop:	  false
+book:	  true
 u3game:	  true
-category: Unity3D
+category: Unity3D-Game
+ico:	  game
 title:    【Unity3D开发小游戏】俄罗斯方块
 date:     2020-08-21 21:09:00
 background-image: https://img-blog.csdnimg.cn/20191202163616482.gif
 tags:
 - Unity3D
 - Unity3D开发小游戏
+- 2020
 ---
 
 @[TOC]

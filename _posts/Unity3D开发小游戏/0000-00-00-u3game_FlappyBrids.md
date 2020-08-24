@@ -1,8 +1,10 @@
 ---
 layout:   blog
 istop:	  true
+book:	  true
 u3game:	  true
-category: Unity3D
+category: Unity3D-Game
+ico:	  game
 title:    【Unity3D开发小游戏】Flappy Bird
 date:     2020-08-21 21:09:00
 background-image: https://imgconvert.csdnimg.cn/aHR0cHM6Ly9ub29idHV0cy5jb20vY29udGVudC91bml0eS8yZC1mbGFwcHktYmlyZC1nYW1lL29ic3RhY2xlX21vdmluZy5naWY

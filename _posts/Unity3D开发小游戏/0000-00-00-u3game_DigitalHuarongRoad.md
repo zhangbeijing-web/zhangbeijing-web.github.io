@@ -1,8 +1,10 @@
 ---
 layout:   blog
-istop:	  true
+istop:	  false
+book:	  false
 u3game:	  true
-category: Unity3D
+category: Unity3D-Game
+ico:	  game
 title:    【Unity3D开发小游戏】数字华容道
 date:     2020-08-21 21:09:00
 background-image: http://cdn.qq764424567.top/git1

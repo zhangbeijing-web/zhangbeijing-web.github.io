@@ -1,8 +1,10 @@
 ---
 layout:   blog
-istop:	  true
+istop:	  false
+book:	  true
 u3game:	  true
-category: Unity3D
+category: Unity3D-Game
+ico:	  game
 title:    【Unity3D开发小游戏】打砖块游戏
 date:     2020-08-21 21:09:00
 background-image: https://imgconvert.csdnimg.cn/aHR0cHM6Ly9ub29idHV0cy5jb20vY29udGVudC91bml0eS8yZC1hcmthbm9pZC1nYW1lL2Fya2Fub2lkX3ByZXZpZXcucG5n
