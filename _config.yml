@@ -32,9 +32,9 @@ links:
   - name:         标签
     url:          /pages/tags
     external:     false
-  - name:         关于
-    url:          /pages/about
-    external:     false
+  # - name:         关于
+  #   url:          /pages/about
+  #   external:     false
 # ------------ CONFIGURABLE END ------------
 
 #permalink:  /:categories/:title.html
